@@ -1,0 +1,293 @@
+/* Media Queries */
+@media (max-width: 830px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .city-grid {
+        grid-template-columns: 1fr;
+    }
+  
+    iframe, video {
+        width: 100%;
+    }
+  
+    .question{
+  
+    
+      font-size: 30px;
+      
+    }
+  
+    .search-button {
+     
+     
+      font-size: 12px; /* Taille du texte */
+    }
+  
+  }
+
+
+
+
+
+
+
+  
+  @media (830px <= width <= 1250px) {
+    .city-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  
+    iframe, video {
+        width: 90%;
+        margin: auto;
+    }
+  
+    .question{
+  
+    
+      font-size: 45px;
+      
+    }
+  
+    .search-button {
+     
+      font-size: 14px; /* Taille du texte */
+    }
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* Section La Tour Eiffel */
+  
+  /* Responsive Design */
+  @media screen and (width <= 1400px) {
+    .tour-eiffel-item-image {
+    max-width: 60%; /* Limite la largeur de l'image à 80% du conteneur */
+    }
+  
+    .arrow {
+     
+      width: 30px; /* Définit la largeur du bouton */
+      height: 30px; /* Définit la hauteur du bouton */
+      font-size: 15px; /* Taille du texte à l'intérieur du bouton */
+    }
+  
+    .star-rating {
+      margin-right: 82%;
+    }
+  
+    .comments {
+      width: 70%;
+    }
+  
+  }
+
+
+
+
+
+
+
+
+  
+  @media screen and (width <= 1000px) {
+  
+    .comments {
+      width: 80%;
+    }
+  
+    .navbar {
+      flex-direction: row;
+      height: 25px;
+    }
+  
+    .like {
+     
+      column-gap: 40%; /* Espacement entre le texte et le bouton */
+    }
+  
+    .navbar li {
+      font-size: 15px;
+      margin: 15px;
+      margin-bottom: 10px;
+      text-align: center;
+  
+    }
+    .avies{
+      
+    margin-left: 30px;
+    }
+  
+    .tour-eiffel-item {
+      flex-direction: column; /* Empile les éléments */
+    }
+    .tour-eiffel-item-info {
+      display: flex;
+      flex-direction: column; /* Empile les éléments */
+      justify-content: center; /* Centre verticalement */
+      align-items: center; /* Centre horizontalement */
+      max-width:none;
+    }
+    
+    .tour-eiffel-item-info .cta-button {
+      display: flex;
+      justify-content: center; /* Centre le contenu du bouton */
+      align-items: center; /* Centre verticalement à l'intérieur */
+      margin: 0 auto; /* Centrage horizontal */
+    }
+  
+    table th, table td {
+      font-size: 0.9rem; /* Réduire la taille des caractères */
+    }
+    iframe {
+      width: 100%; /* La carte occupe toute la largeur */
+    }
+    .tour-eiffel-item-image {
+      max-width: 100%; /* Limite la largeur de l'image à 80% du conteneur */
+      margin-left: 20px;
+    }
+    .tour-eiffel-item-image img{
+      max-width: 100%; /* Limite la largeur de l'image à 80% du conteneur */
+      width: -20%; /* Définit une largeur fixe pour l'image */
+      height: auto; /* Ajuste la hauteur automatiquement pour conserver les proportions */
+      
+    }
+  
+    .star-rating {
+      margin-right: 75%;
+    }
+  
+  }
+  
+
+
+
+
+
+
+
+
+
+
+  /* Pour les écrans de 480px ou moins */
+  @media screen and (width <= 650px) {
+    .titre {
+      font-size: 1.5rem;
+    }
+  
+    .like {
+     
+      font-size: 10px;
+    }
+  
+    .likebutton {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  
+    .cta-button {
+      font-size: 0.9rem;
+    }
+  
+    th, td {
+      font-size: 0.8rem; /* Encore plus petit pour les petits écrans */
+    }
+  
+    .navbar li {
+      display: none; /* La barre de navigation est complètement masquée */
+      visibility: collapse;
+  
+    }
+  
+    .logo{
+  
+      color: #000000;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      display: flex; /* Flexbox pour aligner l'icône et le texte dans le bouton */
+      align-items: center; /* Centrer verticalement l'icône et le texte */
+      justify-content: center; /* Centrer horizontalement l'icône et le texte */
+      font-size: 40px;
+      width: 100%; /* Occupe toute la largeur du conteneur parent */
+    
+    }
+  
+    .connect-button {
+      display: none; /* La barre de navigation est complètement masquée */
+      visibility: collapse;
+    }
+  
+    .star-rating {
+      margin-right: 70%;
+    }
+    
+  
+    .comments {
+      width: 80%;
+    }
+  
+    .likebutton {
+      height: 30px;
+    }
+  }
+
+
+
+
+
+
+
+  
+  
+  
+  /* Media Query pour les petits écrans */
+  @media (max-width: 650px) {
+    .responsive-table, 
+    .responsive-table thead, 
+    .responsive-table tbody, 
+    .responsive-table th, 
+    .responsive-table td, 
+    .responsive-table tr {
+      display: block;
+      width: 100%;
+    }
+  
+    /* Cache les en-têtes de colonnes */
+    .responsive-table thead tr {
+      display: none;
+    }
+  
+    /* Ajoute une étiquette avant chaque cellule */
+    .responsive-table td {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border: none;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    .responsive-table td::before {
+      content: attr(data-label); /* Récupère l'étiquette depuis l'attribut "data-label" */
+      font-weight: bold;
+      color: #333;
+    }
+  
+    .responsive-table tr:last-child td {
+      border-bottom: none;
+    }
+  }

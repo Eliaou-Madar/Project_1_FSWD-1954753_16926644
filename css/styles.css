@@ -1,0 +1,759 @@
+/* City Grid */
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Trois éléments par ligne */
+  gap: 20px;
+  padding: 2em;/*2 fois la taille de la police actuelle*/
+  max-width: 1500px;
+  margin: auto;
+}
+
+.city-item {
+  display: flex;
+  
+  flex-direction: row;
+  align-items: center; /* Centrer verticalement */
+  border: 1px solid #ddd; /* Ajouter une bordure */
+  border-radius: 7px; /* Optionnel : arrondir les coins */
+  
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.city-item:hover {
+  transform: scale(1.05); /* Augmente légèrement la taille */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre pour un effet de relief */
+}
+
+.activity-item a {
+  text-decoration: none;
+}
+
+.city-item a {
+  text-decoration: none;
+  display: flex; /* S'assurer que le contenu est aligné */
+}
+
+.city-item img {
+  width: 180px;
+  height: auto;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-right: 20px; /* Ajouter de l'espace entre l'image et le texte */
+  flex-shrink: 0; /* Empêche l'image de se réduire */
+}
+
+.city-description {
+  flex: 1; /* Prend l'espace restant disponible */
+  text-align: justify; /* Aligne le texte à gauche */
+  margin-right: 20px;
+}
+
+.city-description h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #000;
+}
+
+.city-description p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.question{
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: normal; /*enlever le gras du texte*/
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 60px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Conteneur principal centré */
+.search-bar-container {
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center;
+  margin-bottom:  50px;
+}
+
+.search-bar-wrapper {
+  display: flex;
+  align-items: center;
+  width: 80%; /* Largeur totale */
+  max-width: 700px; /* Limite la largeur */
+  background-color: #fff; /* Couleur de fond */
+  border: 2px solid #ccc; /* Bordure externe seulement */
+  border-radius: 30px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre élégante */
+}
+
+.search-icon {
+  padding: 0 15px; /* Espacement à gauche et à droite de l'icône */
+  font-size: 25px; /* Taille de l'icône */
+}
+
+.search-bar {
+  flex: 1; /* Prend tout l'espace disponible */
+  font-size: 16px; /* Taille du texte */
+  height: 30px; /* Hauteur uniforme */
+}
+
+.search-button {
+  background-color: #0099ad; /* Couleur de fond bleue */
+  color: white; /* Couleur du texte */
+  border: none; /* Supprimer les bordures */
+  border-radius: 30px; /* Coins arrondis */
+  padding: 0 20px; /* Espacement interne */
+  height: 50px; /* Hauteur uniforme */
+  font-size: 16px; /* Taille du texte */
+  cursor: pointer; /* Curseur pointeur */
+  transition: background-color 0.3s; /* Animation douce */
+}
+
+.search-button:hover {
+  background-color: #004650; /* Couleur plus foncée au survol */
+}
+
+h1 {
+  text-align: left;
+  padding: 1em;
+  margin: 0;
+  font-size: 24px;
+}
+
+.activities-section {
+  
+  display: flex;
+  flex-wrap: wrap; /*Cette valeur permet aux éléments flexibles de passer sur une nouvelle ligne lorsqu'il n'y a plus suffisamment d’espace*/
+  gap: 20px;
+  justify-content: space-evenly; /*espace entre les element et les bord de page*/
+  padding: 1em;
+}
+
+.activity-item {
+  max-width: 300px;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px;
+  border-radius: 7px;
+  position: relative; /* Nécessaire pour que le bouton soit positionné par rapport au parent */
+  
+}
+
+
+.activity-item:hover {
+  transform: scale(1.05);
+  
+}
+
+.activity-item img {
+  max-width: 100%;
+  border-radius: 7px;
+}
+
+.activity-description {
+  text-align:left;
+  font-family: Arial,Tahoma,Bitstream Vera Sans,sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+
+/* Bouton like rond rouge */
+.like-button {
+  position: absolute; /* Position relative à son parent */
+  top: 10px; /* Marges pour le placer en haut à droite */
+  right: 10px;
+  background-color: rgb(255, 255, 255); /* Fond rouge */
+  border: 2px solid #000000;
+  color: white; /* Texte blanc */
+  width: 30px; /* Taille fixe */
+  height: 30px;
+  border-radius: 50%; /* Rond parfait */
+  display: flex;
+  justify-content: center; /* Centré horizontalement 🤍 */
+  align-items: center; /* Centré verticalement  🤍*/
+  font-size: 16px; /* Taille du cœur */
+  cursor: pointer; /* Curseur clic */
+  transition: transform 0.3s ease;
+}
+
+.like-button:hover {
+  transform: scale(1.2); /* Agrandissement au survol */
+  background-color: red; /* Fond rouge */
+}
+
+/* Section La Tour Eiffel */
+
+.like {
+  display: flex; /* Utiliser Flexbox pour organiser les éléments */
+  flex-direction: row; /* Alignement horizontal des éléments */
+  justify-content: center; /* Centrer les éléments dans la ligne */
+  align-items: center; /* Centrer verticalement le texte et le bouton */
+  column-gap: 60%; /* Espacement entre le texte et le bouton */
+}
+
+.titre {
+  font-size: 30px; /* Taille du texte du titre */
+  font-weight: bold; /* Mettre le titre en gras */
+  color: rgb(0, 0, 0); /* Couleur noire pour le texte */
+  margin-left: 20px;
+}
+
+.likebutton {
+  margin-right: 20px;
+  padding-right: 10px;
+  display: flex; /* Flexbox pour aligner l'icône et le texte dans le bouton */
+  align-items: center; /* Centrer verticalement l'icône et le texte */
+  justify-content: center; /* Centrer horizontalement l'icône et le texte */
+  background-color: #ffffff; /* Couleur de fond */
+  color: rgb(0, 0, 0); /* Couleur du texte */
+  text-decoration: none; /* Pas de soulignement */
+  border: 2px solid rgb(0, 0, 0); /* Bordure noire */
+  border-radius: 20px; /* Arrondir les coins */
+  font-weight: bold; /* Texte en gras */
+  font-size: 16px; /* Taille du texte */
+  cursor: pointer; /* Changer le curseur au survol */
+  height: 50px; /* Hauteur du bouton */
+  width: 130px; /* Largeur du bouton */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transition fluide pour les effets */
+}
+
+/* Icône à l'intérieur du bouton */
+.likebutton .icon {
+  margin-right: 10px; /* Espacement entre l'icône et le texte */
+  font-size: 18px; /* Taille légèrement plus grande pour l'icône */
+}
+
+/* Effet au survol du bouton */
+.likebutton:hover {
+  background-color: #000000; /* Changer la couleur de fond au survol */
+  transform: scale(1.05); /* Léger agrandissement au survol */
+  color: rgb(255, 255, 255); /* Couleur du texte */
+}
+
+/* Effet au clic */
+.likebutton:active {
+  transform: scale(0.95); /* Réduction temporaire au clic */
+}
+.avies{
+  font-size: 15px;
+  margin-left: 150px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.arrow {
+  background-color: rgba(0, 0, 0, 0.5); /* Définit un fond semi-transparent noir */
+  color: white; /* Texte de couleur blanche */
+  border: none; /* Supprime la bordure */
+  border-radius: 50%; /* Fait un bouton circulaire */
+  width: 40px; /* Définit la largeur du bouton */
+  height: 40px; /* Définit la hauteur du bouton */
+  font-size: 20px; /* Taille du texte à l'intérieur du bouton */
+  cursor: pointer; /* Change le curseur en "main" au survol */
+}
+
+.left-arrow {
+  position: relative; /* Permet un positionnement relatif par rapport à son conteneur au center */
+  top: 0px; /* Pas de décalage vertical */
+  left: 45px; /* Décalage de 45 pixels vers la droite */
+}
+
+.right-arrow {
+  position: relative; /* Permet un positionnement relatif par rapport à son conteneur au center */
+  top: 0px; /* Pas de décalage vertical */
+  right: 45px; /* Décalage de 45 pixels vers la gauche */
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Fait le fond plus opaque au survol */
+}
+
+.tour-eiffel-item {
+  flex-grow: 1; /* Permet à l'élément de s'étirer pour remplir l'espace disponible */
+  display: flex; /* Active le mode Flexbox pour aligner les éléments */
+  flex-direction: row-reverse; /* Place l'image à droite et le texte à gauche */
+  justify-content: center; /* Centre les éléments horizontalement */
+  align-items: stretch; /* Étire les éléments pour occuper la même hauteur */
+  column-gap: 5px; /* Ajoute un espacement horizontal entre le texte et l'image */
+}
+
+.tour-eiffel-item-image {
+  display: flex; /* Active Flexbox pour centrer l'image */
+  align-items: center; /* Centre l'image verticalement */
+  justify-content: center; /* Centre l'image horizontalement */
+  max-width: 80%; /* Limite la largeur de l'image à 80% du conteneur */
+  margin: 30px; /* Ajoute un espacement autour de l'image */
+}
+
+.tour-eiffel-item-image img {
+  width: 900px; /* Définit une largeur fixe pour l'image */
+  height: auto; /* Ajuste la hauteur automatiquement pour conserver les proportions */
+  border-radius: 8px; /* Ajoute des coins arrondis à l'image */
+}
+
+.tour-eiffel-item-info {
+  
+  flex-shrink: 0; /* Empêche l'info de se réduire si l'espace est limité */
+  margin: 30px; /* Ajoute un espacement autour de la section texte */
+  max-width: 320px; /* Limite la largeur maximale du texte */
+  padding: 10px; /* Ajoute de l'espace interne autour du texte */
+  text-align: left; /* Aligne le texte à gauche */
+  align-items: start; /* Positionne les éléments au début verticalement */
+  border-radius: 8px; /* Ajoute des coins arrondis au conteneur */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre pour un effet visuel */
+  background-color: #ffffff;
+}
+
+.tour-eiffel-item-info h2 {
+  font-size: 30px; /* Définit une taille de police plus grande pour le titre */
+  margin-bottom: 15px; /* Ajoute un espace sous le titre */
+  color: #000000; /* Définit la couleur du texte en noir */
+}
+
+.tour-eiffel-item-info p {
+  margin: 10px 0; /* Ajoute un espacement vertical autour des paragraphes */
+  font-size: 15px; /* Définit une taille de police pour le texte */
+  line-height: 1.6; /* Améliore la lisibilité en augmentant l'espacement entre les lignes */
+  color: #000000; /* Définit la couleur du texte en noir */
+}
+
+.tour-eiffel-item-info .cta-button {
+  display: flex; /* Active Flexbox pour aligner les éléments dans le bouton */
+  flex-direction: row; /* Positionne le texte et l'icône côte à côte */
+  justify-content: space-around; 
+  margin-top: 150px; /* Ajoute un espacement en haut du bouton */
+  margin-right: 30px; /* Ajoute un espacement à droite du bouton */
+  margin-left: 30px; /* Ajoute un espacement à gauche du bouton */
+  padding: 10px 50px; /* Ajoute un espace interne autour du texte du bouton */
+  background-color: #f2b203; /* Définit une couleur de fond pour le bouton */
+  color: rgb(0, 0, 0); /* Définit la couleur du texte en noir */
+  text-decoration: none; /* Supprime les soulignements du texte */
+  border-radius: 30px; /* Ajoute des coins arrondis au bouton */
+  font-weight: bold; /* Rend le texte du bouton en gras */
+  text-align: center; /* Centre le texte à l'intérieur du bouton */
+}
+
+.tour-eiffel-item-info .cta-button:hover {
+  background-color: #ffd151; /* Change la couleur du bouton au survol */
+}
+
+
+/* Styles pour la carte et la section des commentaires */
+
+/* Conteneur pour la région et la carte */
+.map-info-container {
+  margin-top: 130px; /* Ajouter un espacement supérieur pour séparer la section des autres */
+  flex-shrink: 0; /* Empêcher l'image ou la carte de rétrécir si l'espace devient limité */
+  display: flex; /* Activer Flexbox pour organiser les éléments horizontalement */
+  flex-direction: row; /* Alignement par défaut : texte à gauche et carte à droite */
+  justify-content: space-evenly; /* Répartir l'espace disponible de manière uniforme entre les éléments */
+  align-items: stretch; /* Étendre les éléments pour qu'ils aient la même hauteur si possible */
+  margin-bottom: 50px;
+  column-gap: 80px; /* Ajouter un espacement entre les lignes (au cas où les éléments passent en colonne sur petits écrans) */
+}
+
+/* Section contenant les informations sur la région */
+
+
+.region-info h3 {
+  font-size: 30px; /* Taille de la police pour le titre de la région */
+}
+
+.region-info p {
+  font-size: 20px; /* Taille de la police pour le texte descriptif */
+}
+
+/* Conteneur pour la carte */
+.map-container {
+  flex: 0 0 40%; /* Fixer la largeur de la carte à 40% du conteneur parent */
+  text-align: right; /* Aligner le contenu de la carte à droite */
+}
+
+/* Style pour l'iframe (par exemple, une carte Google) */
+iframe {
+  width: 100%; /* La carte occupe toute la largeur de son conteneur */
+  max-width: 600px; /* Largeur maximale de la carte, même sur grands écrans */
+  height: 400px; /* Hauteur fixe pour garder un format proportionnel */
+  border: 1px solid #ddd; /* Ajouter une bordure légère autour de la carte */
+  border-radius: 8px; /* Arrondir les coins de la bordure */
+}
+
+/*comment section*/
+
+.comments-section {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.comments-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.comments-section textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.comments-section button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.comments-section button:hover {
+  background-color: #555;
+}
+
+/* Styles pour le conteneur du titre avec la flèche */
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espace entre la flèche et le titre */
+  padding: 10px 0;
+}
+
+/* Style pour le bouton de retour */
+.back-button {
+  position: absolute; /* Positionnement absolu par rapport au conteneur .navbar1 */
+  left: 0; /* Placer tout à gauche */
+  background: none;
+  border: none;
+  font-size: 35px;
+  color: #000000;
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.2s;
+}
+
+.back-button:hover {
+  color: #008e98; /* Couleur survolée */
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.responsive-table th, 
+.responsive-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.responsive-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/*comments space*/
+
+.comments {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 60%;
+  margin: 40px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comments h2 {
+  text-align: center;
+  color: #333;
+}
+
+.comment-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.comment-item:last-child {
+  border-bottom: none;
+}
+
+.comment-author {
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.comment-date {
+  font-size: 12px;
+  color: #777;
+  margin-left: 10px;
+}
+
+.comment-text {
+  margin: 10px 0;
+  margin-left: 10px;
+  color: #555;
+}
+
+form ul {
+  list-style: none;
+  padding: 0;
+}
+
+form li {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+}
+
+input[type="submit"] {
+  background-color: #0099ad;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #005d69;
+}
+
+.rules {
+  font-size: 14px;
+  color: #777;
+  display: flex;
+  align-items: center;
+}
+
+.rules a {
+  color: #0099ad;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.rules a:hover {
+  text-decoration: underline;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 85%;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 25px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #FFD700;
+}
+
+
+/* About us */
+.About-body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3feff;
+  color: #333;
+}
+
+.About-header {
+  background: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 60px 20px;
+  margin-bottom: 30px;
+}
+
+.About-header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.About-header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  font-weight: lighter;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.mission h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #005c65;
+}
+
+.mission p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.mission {
+  background-color: #fff;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team{
+  background-color: #fff;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+/* contact */
+.contact-body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3feff;
+  color: #333;
+}
+
+.header-contact {
+  background: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 60px 20px;
+  margin-bottom: 30px;
+}
+
+.header-contact h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.header-contact p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  font-weight: lighter;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.contact h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #005c65;
+}
+
+.contact p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.contact {
+  background-color: #fff;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.button-contact {
+  background-color: #005c65;
+  color: white;
+  padding: 12px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-contact:hover {
+  background-color: #003135;
+}
+
+.connect-button2:hover {
+  background-color: #007B9E; /* Darker blue on hover */
+}
+
+/* Link to register or other actions */
+.register-link {
+  margin-top: 15px;
+  display: block;
+  color: #005A8D;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
